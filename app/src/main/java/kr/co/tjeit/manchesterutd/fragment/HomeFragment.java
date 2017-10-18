@@ -4,6 +4,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +38,7 @@ public class HomeFragment extends Fragment{
         this.LinkTxt3 = (TextView) v.findViewById(R.id.LinkTxt3);
         this.LinkTxt2 = (TextView) v.findViewById(R.id.LinkTxt2);
         this.LinkTxt1 = (TextView) v.findViewById(R.id.LinkTxt1);
+        setValues();
 
         Linkify.TransformFilter mTransform = new Linkify.TransformFilter() {
             @Override
@@ -66,5 +70,14 @@ public class HomeFragment extends Fragment{
         Linkify.addLinks(LinkTxt4, pattern10, "https://namu.wiki/w/%EC%95%84%EC%8A%A4%EB%82%A0%20FC");
 
         return v;
+    }
+
+    private void setValues() {
+        String string = "가나다라마바사아자차카타파하";
+        int color = Color.RED;
+        SpannableStringBuilder builder = new SpannableStringBuilder(string);
+        builder.setSpan(new ForegroundColorSpan(color), 1, 4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        LinkTxt4.append(builder);
+
     }
 }

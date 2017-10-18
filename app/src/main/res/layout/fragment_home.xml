@@ -123,6 +123,7 @@
                     android:padding="1dp">
 
                     <TextView
+                        android:lines="2"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="1dp"
@@ -132,12 +133,12 @@
                         android:textSize="15sp" />
 
                     <TextView
+                        android:text="잉글리시 프리미어 리그 (English Premier League)"
                         android:id="@+id/LinkTxt1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:background="#F5F5F5"
                         android:gravity="center_horizontal"
-                        android:text="잉글리시 프리미어 리그 (English Premier League)"
                         android:textSize="15sp" />
                 </TableRow>
 
@@ -157,6 +158,7 @@
                         android:textSize="15sp" />
 
                     <TextView
+
                         android:id="@+id/LinkTxt2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"

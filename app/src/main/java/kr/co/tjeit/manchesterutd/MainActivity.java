@@ -1,5 +1,6 @@
 package kr.co.tjeit.manchesterutd;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -8,6 +9,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import kr.co.tjeit.manchesterutd.util.ContextUtil;
+
+import static android.R.attr.fragment;
+import static android.R.attr.tag;
 
 public class MainActivity extends BaseActivity {
 
@@ -126,6 +130,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+
 
     }
 

@@ -73,11 +73,7 @@ public class HomeFragment extends Fragment{
     }
 
     private void setValues() {
-        String string = "가나다라마바사아자차카타파하";
-        int color = Color.RED;
-        SpannableStringBuilder builder = new SpannableStringBuilder(string);
-        builder.setSpan(new ForegroundColorSpan(color), 1, 4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        LinkTxt4.append(builder);
+
 
     }
 }

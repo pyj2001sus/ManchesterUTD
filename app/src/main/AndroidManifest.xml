@@ -19,7 +19,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".MyProfileActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".all_members.first_team.DeGea" />
+        <activity android:name=".all_members.first_team.Lindelof"></activity>
     </application>
 
 </manifest>

@@ -43,8 +43,8 @@ public class MainActivity extends BaseActivity {
                 newsFragment.setVisibility(View.GONE);
                 scaduleFragment.setVisibility(View.GONE);
                 memberFragment.setVisibility(View.GONE);
-                homeBtn.setScaleX(1.2f);
-                homeBtn.setScaleY(1.2f);
+                homeBtn.setScaleX(1.3f);
+                homeBtn.setScaleY(1.3f);
                 newsBtn.setScaleX(1);
                 newsBtn.setScaleY(1);
                 scaduleBtn.setScaleX(1);
@@ -63,8 +63,8 @@ public class MainActivity extends BaseActivity {
                 memberFragment.setVisibility(View.GONE);
                 homeBtn.setScaleX(1);
                 homeBtn.setScaleY(1);
-                newsBtn.setScaleX(1.2f);
-                newsBtn.setScaleY(1.2f);
+                newsBtn.setScaleX(1.3f);
+                newsBtn.setScaleY(1.3f);
                 scaduleBtn.setScaleX(1);
                 scaduleBtn.setScaleY(1);
                 memberBtn.setScaleX(1);
@@ -83,8 +83,8 @@ public class MainActivity extends BaseActivity {
                 homeBtn.setScaleY(1);
                 newsBtn.setScaleX(1);
                 newsBtn.setScaleY(1);
-                scaduleBtn.setScaleX(1.2f);
-                scaduleBtn.setScaleY(1.2f);
+                scaduleBtn.setScaleX(1.3f);
+                scaduleBtn.setScaleY(1.3f);
                 memberBtn.setScaleX(1);
                 memberBtn.setScaleY(1);
             }
@@ -103,11 +103,24 @@ public class MainActivity extends BaseActivity {
                 newsBtn.setScaleY(1);
                 scaduleBtn.setScaleX(1);
                 scaduleBtn.setScaleY(1);
-                memberBtn.setScaleX(1.2f);
-                memberBtn.setScaleY(1.2f);
+                memberBtn.setScaleX(1.3f);
+                memberBtn.setScaleY(1.3f);
             }
         });
 
+        myProfileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ContextUtil.getLoginUser(mContext) == null){
+                    Intent intent = new Intent(mContext, LoginActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(mContext, MyProfileActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
     }
 

@@ -70,7 +70,7 @@
         <fragment
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            class="kr.co.tjeit.manchesterutd.fragment.MemberFragment"
+            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.MemberFragment"
             tools:layout="@layout/fragment_member"/>
     </FrameLayout>
 
@@ -80,6 +80,7 @@
         android:background="#000000"/>
 
     <LinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"

@@ -1,4 +1,4 @@
-package kr.co.tjeit.manchesterutd.fragment;
+package kr.co.tjeit.manchesterutd.fragment.member_fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,12 +13,12 @@ import kr.co.tjeit.manchesterutd.R;
  * Created by the on 2017-10-18.
  */
 
-public class MemberFragment extends Fragment{
+public class ReserveTeamFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_member, container, false);
+        View v = inflater.inflate(R.layout.fragment_reserve_team, container, false);
 
         return v;
     }

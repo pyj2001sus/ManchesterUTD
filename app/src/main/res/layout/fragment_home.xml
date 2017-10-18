@@ -1,6 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/manred"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/manutd_logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/manred"
+                android:gravity="center_horizontal"
+                android:text="맨체스터 유나이티드 FC"
+                android:textColor="#FFE507"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text="Manchester United F.C."
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="정식명칭"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="Manchester United Football Club"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="별칭"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="레드 데빌스 (The Red Devils)"
+                        android:textColor="#FF0000"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="창단"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="1878년"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="소속 리그"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/LinkTxt1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="잉글리시 프리미어 리그 (English Premier League)"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="연고지"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/LinkTxt2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="그레이터맨체스터 주 트래포드 (Trafford)"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="홈구장"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/LinkTxt3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="올드 트래포드 (Old Trafford)(75,643명 수용)"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:lines="3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="라이벌"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/LinkTxt4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="리버풀 FC - 노스웨스트 더비 - 리즈 유나이티드 FC - 로즈 더비 - 맨체스터 시티 FC - 맨체스터 더비 - 아스날 FC"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:lines="3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="라이벌"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/LinkTxt5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="리버풀 FC - 노스웨스트 더비 - 리즈 유나이티드 FC - 로즈 더비 - 맨체스터 시티 FC - 맨체스터 더비 - 아스날 FC"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:lines="3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="라이벌"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/LinkTxt6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="리버풀 FC - 노스웨스트 더비 - 리즈 유나이티드 FC - 로즈 더비 - 맨체스터 시티 FC - 맨체스터 더비 - 아스날 FC"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:lines="3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:background="#EF869C"
+                        android:gravity="center"
+                        android:text="라이벌"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/LinkTxt7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#F5F5F5"
+                        android:gravity="center_horizontal"
+                        android:text="리버풀 FC - 노스웨스트 더비 - 리즈 유나이티드 FC - 로즈 더비 - 맨체스터 시티 FC - 맨체스터 더비 - 아스날 FC"
+                        android:textSize="15sp" />
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </LinearLayout>

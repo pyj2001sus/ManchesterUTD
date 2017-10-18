@@ -2,12 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
-
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <TabHost
             android:id="@+id/myTabHost"
@@ -19,11 +15,18 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
                 <TabWidget
                     android:id="@android:id/tabs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white" />
+
+                </HorizontalScrollView>
+
 
                 <FrameLayout
                     android:id="@android:id/tabcontent"
@@ -36,6 +39,12 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
+                        <fragment
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.FirstTeamFragment"
+                            tools:layout="@layout/fragment_first_team"/>
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -43,6 +52,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
+
+                        <fragment
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.ReserveTeamFragment"
+                            tools:layout="@layout/fragment_reserve_team"/>
 
                     </LinearLayout>
 
@@ -53,6 +68,12 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
+                        <fragment
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.AcademyFragment"
+                            tools:layout="@layout/fragment_academy"/>
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -60,6 +81,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
+
+                        <fragment
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.DirectorFragment"
+                            tools:layout="@layout/fragment_director"/>
 
                     </LinearLayout>
 
@@ -69,6 +96,12 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
+                        <fragment
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.CoachingStaffFragment"
+                            tools:layout="@layout/fragment_coaching_staff"/>
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -76,6 +109,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
+
+                        <fragment
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.LegendFragment"
+                            tools:layout="@layout/fragment_legend"/>
 
                     </LinearLayout>
 
@@ -85,9 +124,5 @@
             </LinearLayout>
 
         </TabHost>
-
-
-    </HorizontalScrollView>
-
 
 </LinearLayout>

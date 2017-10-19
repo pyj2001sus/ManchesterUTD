@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/manchester_app_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -20,8 +20,8 @@
         <activity android:name=".MyProfileActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".all_members.first_team.DeGea" />
-        <activity android:name=".all_members.first_team.Lindelof"></activity>
+        <activity android:name=".all_members.team_first.DeGea" />
+        <activity android:name=".all_members.team_first.Lindelof"></activity>
     </application>
 
 </manifest>

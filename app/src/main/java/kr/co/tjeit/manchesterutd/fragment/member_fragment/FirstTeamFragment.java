@@ -7,11 +7,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import kr.co.tjeit.manchesterutd.R;
-import kr.co.tjeit.manchesterutd.all_members.first_team.DeGea;
-import kr.co.tjeit.manchesterutd.all_members.first_team.Lindelof;
+import kr.co.tjeit.manchesterutd.all_members.team_first.DeGea;
+import kr.co.tjeit.manchesterutd.all_members.team_first.Lindelof;
 
 /**
  * Created by the on 2017-10-18.
@@ -29,14 +32,15 @@ public class FirstTeamFragment extends Fragment {
         this.lindelof = (LinearLayout) v.findViewById(R.id.lindelof);
         this.degea = (LinearLayout) v.findViewById(R.id.de_gea);
         setupEvents();
-
         return v;
     }
 
     private void setupEvents() {
-        degea.setOnClickListener(new View.OnClickListener() {
+
+             degea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(getActivity(), DeGea.class);
                 startActivity(intent);
             }

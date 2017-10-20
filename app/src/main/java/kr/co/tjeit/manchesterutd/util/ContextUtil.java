@@ -3,7 +3,7 @@ package kr.co.tjeit.manchesterutd.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import kr.co.tjeit.manchesterutd.data.User;
+import kr.co.tjeit.manchesterutd.data.user.User;
 
 /**
  * Created by the on 2017-09-06.

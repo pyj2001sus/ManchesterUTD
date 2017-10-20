@@ -1,4 +1,4 @@
-package kr.co.tjeit.manchesterutd.data;
+package kr.co.tjeit.manchesterutd.data.user;
 
 import org.json.JSONException;
 import org.json.JSONObject;

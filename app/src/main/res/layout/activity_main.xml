@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#95241E"
+    android:orientation="vertical"
     tools:context="kr.co.tjeit.manchesterutd.MainActivity">
 
 
@@ -16,73 +16,76 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/main_top_frag"/>
+            android:background="@drawable/main_top_frag" />
 
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/homeFragment"
-        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:visibility="visible">
 
         <fragment
+            class="kr.co.tjeit.manchesterutd.fragment.HomeFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            class="kr.co.tjeit.manchesterutd.fragment.HomeFragment"
-            tools:layout="@layout/fragment_home"/>
+            tools:layout="@layout/fragment_home" />
 
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/newsFragment"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:visibility="gone">
+
         <fragment
+            class="kr.co.tjeit.manchesterutd.fragment.NewsFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            class="kr.co.tjeit.manchesterutd.fragment.NewsFragment"
-            tools:layout="@layout/fragment_news"/>
+            tools:layout="@layout/fragment_news" />
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/scaduleFragment"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:visibility="gone">
+
         <fragment
+            class="kr.co.tjeit.manchesterutd.fragment.ScaduleFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            class="kr.co.tjeit.manchesterutd.fragment.ScaduleFragment"
-            tools:layout="@layout/fragment_scadule"/>
+            tools:layout="@layout/fragment_scadule" />
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/memberFragment"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:visibility="gone">
+
         <fragment
+            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.MemberFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.MemberFragment"
-            tools:layout="@layout/fragment_member"/>
+            tools:layout="@layout/fragment_member" />
     </FrameLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#000000"/>
+        android:background="#000000" />
 
     <LinearLayout
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/white"
         android:gravity="center"
         android:padding="5dp">
 

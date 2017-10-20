@@ -38,14 +38,32 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <fragment
-                        android:id="@+id/fragment"
-                        class="kr.co.tjeit.manchesterutd.fragment.member_fragment.FirstTeamFragment"
+                    <FrameLayout
+                        android:id="@+id/allmemberFrag"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        tools:layout="@layout/fragment_first_team" >
+                        android:layout_height="match_parent">
 
-                    </fragment>
+                        <fragment
+                            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.FirstTeamFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:layout="@layout/fragment_first_team" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/de_gea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <fragment
+                            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.FirstTeamFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:layout="@layout/activity_de_gea" />
+
+                    </FrameLayout>
+
 
                 </LinearLayout>
 

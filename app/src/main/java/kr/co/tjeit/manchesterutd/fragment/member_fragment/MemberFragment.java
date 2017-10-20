@@ -17,7 +17,7 @@ import kr.co.tjeit.manchesterutd.R;
  * Created by the on 2017-10-18.
  */
 
-public class MemberFragment extends Fragment{
+public class MemberFragment extends Fragment {
 
     TabHost myTabHost;
     private android.widget.TabWidget tabs;
@@ -28,6 +28,8 @@ public class MemberFragment extends Fragment{
     private android.widget.FrameLayout tabcontent;
     private LinearLayout tab5;
     private LinearLayout tab6;
+    private FrameLayout allmemberFrag;
+    private FrameLayout degea;
 
     @Nullable
     @Override

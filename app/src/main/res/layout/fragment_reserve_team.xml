@@ -1,11 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="리저브팀"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/reserve_image"/>
+
+            <TextView
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="리저브팀 소개"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="맨체스터 유나이티드의 리저브팀은 2010년부터 워렌 조이스의 지휘 아래 눈부신 성공을 이어가고 있다."/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="이번 2016/17 시즌 시작부터, 리저브 팀은 바클레이즈 U21 프리미어리그에서 뛰게 되었다. 경기는 맨유가 세 번 이겼고, 2016년 8월에 프리미어 2부리그에서 자리를 차지했다."/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="현재 대회는 기본적으로 연령 제한이 있지만, 21세부터 23세까지의 선수도 필드 플레이어 3명과 골키퍼 1명까지는 출전할 수 있다는 규정이 있다. 덕분에 지난 시즌의 대런 플레쳐나 조니 에반스처럼 부상에서 회복 중인 선수들이 이 대회에 참가하며 경기 감각을 기르기도 했다. 꾸준히 대회 형태가 바뀐 탓에 올 시즌 맨유는 12팀이 속한 디비전 1에서 경기를 치르며, 각 클럽과 홈과 원정에서 두 번씩 경기를 벌인다. 플레이오프나 시즌 막판의 결승전은 열리지 않으나 최하위 2팀은 디비전 2로 강등된다."/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="리저브 팀은 맨체스터 시니어 컵과 랭커셔 시니어컵에 참여하기도 했고, 맨유는 최근 2014년과 2013년 각각 두 번의 토너먼트 경기에서 승리의 면모를 발휘했다. "/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="최근 맨유의 성공은 조이스 감독의 지휘 하에 새로운 우승 팀으로서의 역사를 쓰고 있는 것과 같다. 사실상 퍼스트 팀에 속해있는 유스 팀 졸업자들의 존재가 유스 팀 자체의 발전에 많은 도움을 주고 있다. "/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="리저브팀은 과거 올트링엄의 모스 레인에서 홈 경기를 치렀으나 잠시 샐퍼드의 AJ 벨 스타디움을 사용하기도 했다. 올 시즌에는 레이 스포츠 빌리지를 홈 구장으로 쓰게 된다. 그러나 대회의 권위를 높이기 위한 노력의 일환으로 일부 경기는 올드 트라포드에서 펼쳐질 예정이며, 원정 경기 역시 다수 상대 1군의 홈 구장에서 진행될 예정이다."/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="리저브팀은 유망주들을 중심으로 시즌을 시작하지만, 보통 시간이 지나면서 성인 선수들이 가세하곤 한다. 리저브팀의 선수들은 발전 정도에 따라 아드난 야누자이처럼 1군에 발탁되기도 하고 경험을 쌓기 위해 다른 곳으로 임대되기도 하고, 아예 클럽을 떠나기도 한다. 그럼 아카데미에서 올라온 선수들이 빈 자리를 대신하기도 한다."/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="조이스 감독은 맨유가 최고의 선수들을 길러내고 있음을 잊지 않고 전통을 이어가고 있으며, 중요한 것은 클럽 내 신뢰가 있다는 것이다. 맨유는 여전히 최고의 유망주들을 길러내는 클럽 중 하나로, 그리고 더 중요하게는 클럽의 자랑거리가 될 수 있는 개개인을 배출하는 클럽으로 명성을 이어가고 있다. 가장 중요한 것은 클럽의 1군에서 뛸 수 있는 선수를 길러내는 것이지만 다른 선수들 역시 축구계에서 성공적인 경력을 이어갈 것이다."/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
 
 </LinearLayout>

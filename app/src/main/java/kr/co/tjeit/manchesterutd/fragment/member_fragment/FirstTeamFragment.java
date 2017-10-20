@@ -1,20 +1,22 @@
 package kr.co.tjeit.manchesterutd.fragment.member_fragment;
 
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import kr.co.tjeit.manchesterutd.R;
 import kr.co.tjeit.manchesterutd.adapter.FirstTeamAdapter;
+import kr.co.tjeit.manchesterutd.data.member.FirstTeam;
 import kr.co.tjeit.manchesterutd.util.GlobalData;
 
 /**
@@ -26,8 +28,6 @@ public class FirstTeamFragment extends Fragment {
     FirstTeamAdapter mAdapter;
 
 
-    private android.widget.LinearLayout degea;
-    private android.widget.LinearLayout lindelof;
     private android.widget.TextView number1;
     private de.hdodenhof.circleimageview.CircleImageView circleImageView;
     private FrameLayout allmemberLayout;
@@ -44,11 +44,14 @@ public class FirstTeamFragment extends Fragment {
     private android.widget.TextView debutTxt;
     private android.widget.TextView countryTxt;
     private android.widget.TextView introductionTxt;
+    private android.widget.GridView memberGridView;
+    private CircleImageView circleImageView2;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_first_team, container, false);
+
         this.introductionTxt = (TextView) v.findViewById(R.id.introductionTxt);
         this.countryTxt = (TextView) v.findViewById(R.id.countryTxt);
         this.debutTxt = (TextView) v.findViewById(R.id.debutTxt);
@@ -64,7 +67,7 @@ public class FirstTeamFragment extends Fragment {
         this.memberDetailLayout = (LinearLayout) v.findViewById(R.id.memberDetailLayout);
         this.allmemberLayout = (FrameLayout) v.findViewById(R.id.allmemberLayout);
         this.circleImageView = (CircleImageView) v.findViewById(R.id.circleImageView);
-        this.degea = (LinearLayout) v.findViewById(R.id.de_gea);
+        this.memberGridView = (GridView) v.findViewById(R.id.memberGridView);
         return v;
     }
 
@@ -77,6 +80,29 @@ public class FirstTeamFragment extends Fragment {
 
     private void setupEvents() {
 
+        memberGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                FirstTeam data = GlobalData.firstTeams.get(i);
+                backNumTxt.setText(data.getBackNum() + "");
+                playerNameTxt.setText(data.getName());
+                positionTxt.setText(data.getPosition());
+                playedGameTxt.setText(data.getPlayedGame() + "경기");
+                goalTxt.setText(data.getGoal() + "골");
+                joinUnitedTxt.setText(data.getJoinUnited());
+                transferfeeTxt.setText(data.getTransferFee());
+                beforeUnitedTxt.setText(data.getBeforeUnited());
+                debutTxt.setText(data.getUnitedDebut());
+                countryTxt.setText(data.getCountry());
+                introductionTxt.setText(data.getIntroduction());
+
+
+                allmemberLayout.setVisibility(View.GONE);
+                memberDetailLayout.setVisibility(View.VISIBLE);
+            }
+        });
+
+
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,22 +110,12 @@ public class FirstTeamFragment extends Fragment {
                 memberDetailLayout.setVisibility(View.GONE);
             }
         });
-
-        degea.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                allmemberLayout.setVisibility(View.GONE);
-                memberDetailLayout.setVisibility(View.VISIBLE);
-
-            }
-        });
-
     }
 
     private void setValues() {
 
         mAdapter = new FirstTeamAdapter(getActivity(), GlobalData.firstTeams);
-
+        memberGridView.setAdapter(mAdapter);
 
     }
 

@@ -19,6 +19,7 @@ public class GlobalData {
 
         firstTeams.add(new FirstTeam(1, "데 헤아", "골키퍼", 269, 0, "2011년 7월 1일", null, "아틀레티코 마드리드",
                 "2011년 8월 7일 v 맨시티(N)", "스페인", null));
-
+        firstTeams.add(new FirstTeam(10, "루카쿠", "공격수", 123, 20, "2016년 7월 1일", null, "에버튼",
+                "2015년 1월 2일 v 리버풀(N)", "벨기에", null));
     }
 }

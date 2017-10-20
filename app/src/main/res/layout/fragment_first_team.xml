@@ -11,7 +11,7 @@
         android:id="@+id/allmemberLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -28,6 +28,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:tag="1"
                         android:id="@+id/de_gea"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -56,7 +57,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/lindelof"
+                        android:tag="2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -65,7 +66,8 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circleImageView2"
                             android:layout_width="wrap_content"
                             android:layout_height="75dp"
                             android:layout_marginTop="10dp"
@@ -84,6 +86,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -111,6 +114,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="4"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -146,6 +150,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:tag="5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -172,6 +177,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="6"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -199,6 +205,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="7"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -226,6 +233,126 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/member_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="75dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/jones_image"
+                            app:civ_border_color="#FF000000"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="존스"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/member_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="75dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/de_gea_image"
+                            app:civ_border_color="#FF000000"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="1. 데 헤아"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:tag="10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/member_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="75dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/lindelof_image"
+                            app:civ_border_color="#FF000000"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="린델로프"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:tag="11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/member_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="75dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/vaily_image"
+                            app:civ_border_color="#FF000000"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="바이"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:tag="12"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -261,6 +388,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:tag="13"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -287,6 +415,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="14"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -314,6 +443,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="15"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -341,6 +471,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="16"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -376,6 +507,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:tag="17"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -402,6 +534,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="18"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -429,6 +562,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="19"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -456,6 +590,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="20"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -491,6 +626,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:tag="21"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -517,6 +653,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="22"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -544,6 +681,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="23"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -571,6 +709,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="24"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -606,6 +745,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:tag="25"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -632,6 +772,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="26"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -659,6 +800,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="27"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -686,6 +828,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="28"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -721,6 +864,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:tag="29"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -747,121 +891,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/member_background"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="75dp"
-                            android:layout_marginTop="10dp"
-                            android:src="@drawable/lindelof_image"
-                            app:civ_border_color="#FF000000"
-                            app:civ_border_width="2dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"
-                            android:text="린델로프"
-                            android:textSize="15sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/member_background"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="75dp"
-                            android:layout_marginTop="10dp"
-                            android:src="@drawable/vaily_image"
-                            app:civ_border_color="#FF000000"
-                            app:civ_border_width="2dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"
-                            android:text="바이"
-                            android:textSize="15sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/member_background"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="75dp"
-                            android:layout_marginTop="10dp"
-                            android:src="@drawable/jones_image"
-                            app:civ_border_color="#FF000000"
-                            app:civ_border_width="2dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"
-                            android:text="존스"
-                            android:textSize="15sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/member_background"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="75dp"
-                            android:layout_marginTop="10dp"
-                            android:src="@drawable/de_gea_image"
-                            app:civ_border_color="#FF000000"
-                            app:civ_border_width="2dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"
-                            android:text="1. 데 헤아"
-                            android:textSize="15sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                        android:tag="30"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -922,7 +952,6 @@
         android:id="@+id/memberDetailLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000000"
         android:orientation="vertical"
         android:visibility="visible">
 

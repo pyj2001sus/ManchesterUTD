@@ -60,7 +60,6 @@ public class FirstTeamFragment extends Fragment {
         this.memberDetailLayout = (LinearLayout) v.findViewById(R.id.memberDetailLayout);
         this.allmemberLayout = (FrameLayout) v.findViewById(R.id.allmemberLayout);
         this.circleImageView = (CircleImageView) v.findViewById(R.id.circleImageView);
-        this.lindelof = (LinearLayout) v.findViewById(R.id.lindelof);
         this.degea = (LinearLayout) v.findViewById(R.id.de_gea);
         return v;
     }

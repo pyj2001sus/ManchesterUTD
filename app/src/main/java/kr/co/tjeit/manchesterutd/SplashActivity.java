@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import kr.co.tjeit.manchesterutd.util.GlobalData;
+
 public class SplashActivity extends BaseActivity {
 
     @Override
@@ -18,20 +20,21 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(mContext, MainActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        }, 2000);
 
     }
 
     @Override
     public void setValues() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                    Intent intent = new Intent(mContext, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-
-            }
-        }, 2000);
+        GlobalData.initGlobalData();
     }
 
     @Override

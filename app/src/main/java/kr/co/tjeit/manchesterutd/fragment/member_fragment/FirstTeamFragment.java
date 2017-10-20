@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import kr.co.tjeit.manchesterutd.R;
+import kr.co.tjeit.manchesterutd.adapter.FirstTeamAdapter;
 import kr.co.tjeit.manchesterutd.util.GlobalData;
 
 /**
@@ -21,6 +22,9 @@ import kr.co.tjeit.manchesterutd.util.GlobalData;
  */
 
 public class FirstTeamFragment extends Fragment {
+
+    FirstTeamAdapter mAdapter;
+
 
     private android.widget.LinearLayout degea;
     private android.widget.LinearLayout lindelof;
@@ -93,6 +97,8 @@ public class FirstTeamFragment extends Fragment {
     }
 
     private void setValues() {
+
+        mAdapter = new FirstTeamAdapter(getActivity(), GlobalData.firstTeams);
 
 
     }

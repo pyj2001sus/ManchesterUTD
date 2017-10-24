@@ -151,6 +151,7 @@ public class FirstTeamFragment extends Fragment {
         playerList.clear();
         if (categoryIndex==0) {
 
+
             playerList.add("반삭");
             playerList.add("댄디컷");
             playerList.add("샤기컷");

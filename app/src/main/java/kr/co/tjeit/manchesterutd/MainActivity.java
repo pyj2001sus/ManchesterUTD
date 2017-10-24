@@ -17,6 +17,10 @@ import static android.R.attr.tag;
 
 public class MainActivity extends BaseActivity {
 
+
+    private final long FINISH_INTERVAL_TIME = 2000;
+    private long backPressedTime = 0;
+
     private android.widget.ImageView homeBtn;
     private android.widget.ImageView searchBtn;
     private android.widget.ImageView contentBtn;
@@ -37,6 +41,7 @@ public class MainActivity extends BaseActivity {
         bindViews();
         setupEvents();
         setValues();
+
     }
 
     @Override
@@ -132,35 +137,24 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setValues() {
 
-
     }
 
-    public class BackPressCloseHandler {
-        private long backKeyPressedTime = 0;
-        private Toast toast;
-        private Activity activity;
+    @Override
+    public void onBackPressed() {
+        long tempTime = System.currentTimeMillis();
+        long intervalTime = tempTime - backPressedTime;
 
-        public BackPressCloseHandler(Activity context) {
-            this.activity = context;
+        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
+        {
+            super.onBackPressed();
         }
-
-        public void onBackPressed() {
-            if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
-                backKeyPressedTime = System.currentTimeMillis();
-                showGuide();
-                return;
-            }
-            if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
-                activity.finish();
-                toast.cancel();
-            }
-        }
-
-        public void showGuide() {
-            toast = Toast.makeText(activity, "\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
-            toast.show();
+        else
+        {
+            backPressedTime = tempTime;
+            Toast.makeText(getApplicationContext(), "한번 더 뒤로가기 누르면 꺼버린다.", Toast.LENGTH_SHORT).show();
         }
     }
+
 
     @Override
     public void bindViews() {

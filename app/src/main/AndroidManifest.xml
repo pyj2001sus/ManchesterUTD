@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.co.tjeit.manchesterutd">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/manchester_app_icon"
@@ -20,8 +22,6 @@
         <activity android:name=".MyProfileActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".all_members.team_first.DeGea" />
-        <activity android:name=".all_members.team_first.Lindelof"></activity>
     </application>
 
 </manifest>

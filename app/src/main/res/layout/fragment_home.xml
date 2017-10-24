@@ -41,7 +41,8 @@
             <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:stretchColumns="1">
+                android:stretchColumns="*"
+                android:shrinkColumns="1">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -59,7 +60,7 @@
                         android:textSize="15sp" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#F5F5F5"
                         android:gravity="center_horizontal"
@@ -132,10 +133,11 @@
                         android:textSize="15sp" />
 
                     <TextView
+                        android:layout_weight="1"
                         android:text="잉글리시 프리미어 리그 (English Premier League)"
                         android:id="@+id/LinkTxt1"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#F5F5F5"
                         android:gravity="center_horizontal"
                         android:textSize="15sp" />
@@ -159,8 +161,8 @@
                     <TextView
 
                         android:id="@+id/LinkTxt2"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#F5F5F5"
                         android:gravity="center_horizontal"
                         android:text="그레이터맨체스터 주 트래포드 (Trafford)"
@@ -184,8 +186,8 @@
 
                     <TextView
                         android:id="@+id/LinkTxt3"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#F5F5F5"
                         android:gravity="center_horizontal"
                         android:text="올드 트래포드 (Old Trafford)(75,643명 수용)"
@@ -199,7 +201,6 @@
                     android:padding="1dp">
 
                     <TextView
-                        android:lines="3"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="1dp"
@@ -210,8 +211,8 @@
 
                     <TextView
                         android:id="@+id/LinkTxt4"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#F5F5F5"
                         android:gravity="center_horizontal"
                         android:text="리버풀 FC - 노스웨스트 더비 - 리즈 유나이티드 FC - 로즈 더비 - 맨체스터 시티 FC - 맨체스터 더비 - 아스날 FC"
@@ -225,7 +226,6 @@
                     android:padding="1dp">
 
                     <TextView
-                        android:lines="3"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="1dp"
@@ -236,8 +236,8 @@
 
                     <TextView
                         android:id="@+id/LinkTxt5"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#F5F5F5"
                         android:gravity="center_horizontal"
                         android:text="리버풀 FC - 노스웨스트 더비 - 리즈 유나이티드 FC - 로즈 더비 - 맨체스터 시티 FC - 맨체스터 더비 - 아스날 FC"
@@ -251,7 +251,6 @@
                     android:padding="1dp">
 
                     <TextView
-                        android:lines="3"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="1dp"
@@ -262,8 +261,8 @@
 
                     <TextView
                         android:id="@+id/LinkTxt6"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#F5F5F5"
                         android:gravity="center_horizontal"
                         android:text="리버풀 FC - 노스웨스트 더비 - 리즈 유나이티드 FC - 로즈 더비 - 맨체스터 시티 FC - 맨체스터 더비 - 아스날 FC"
@@ -277,7 +276,6 @@
                     android:padding="1dp">
 
                     <TextView
-                        android:lines="3"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="1dp"
@@ -288,8 +286,8 @@
 
                     <TextView
                         android:id="@+id/LinkTxt7"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#F5F5F5"
                         android:gravity="center_horizontal"
                         android:text="리버풀 FC - 노스웨스트 더비 - 리즈 유나이티드 FC - 로즈 더비 - 맨체스터 시티 FC - 맨체스터 더비 - 아스날 FC"

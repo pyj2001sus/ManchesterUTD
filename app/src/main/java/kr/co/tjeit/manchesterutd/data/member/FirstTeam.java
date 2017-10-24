@@ -1,29 +1,33 @@
 package kr.co.tjeit.manchesterutd.data.member;
 
+import android.widget.ImageView;
+
 import java.io.Serializable;
+import java.net.URL;
 
 /**
  * Created by the on 2017-10-20.
  */
 
-public class FirstTeam implements Serializable{
+public class FirstTeam implements Serializable {
 
-    public int backNum;
-    public String name;
-    public String position;
-    public int playedGame;
-    public int goal;
-    public String joinUnited;
-    public String transferFee;
-    public String beforeUnited;
-    public String unitedDebut;
-    public String country;
-    public String introduction;
+    private int backNum;
+    private String name;
+    private String position;
+    private int playedGame;
+    private int goal;
+    private String joinUnited;
+    private String transferFee;
+    private String beforeUnited;
+    private String unitedDebut;
+    private String country;
+    private String playerImgURL;
+    private String introduction;
 
     public FirstTeam() {
     }
 
-    public FirstTeam(int backNum, String name, String position, int playedGame, int goal, String joinUnited, String transferFee, String beforeUnited, String unitedDebut, String country, String introduction) {
+    public FirstTeam(int backNum, String name, String position, int playedGame, int goal, String joinUnited, String transferFee, String beforeUnited, String unitedDebut, String country, String playerImgURL, String introduction) {
         this.backNum = backNum;
         this.name = name;
         this.position = position;
@@ -34,9 +38,9 @@ public class FirstTeam implements Serializable{
         this.beforeUnited = beforeUnited;
         this.unitedDebut = unitedDebut;
         this.country = country;
+        this.playerImgURL = playerImgURL;
         this.introduction = introduction;
     }
-
 
     public int getBackNum() {
         return backNum;
@@ -118,6 +122,14 @@ public class FirstTeam implements Serializable{
         this.country = country;
     }
 
+    public String getPlayerImgURL() {
+        return playerImgURL;
+    }
+
+    public void setPlayerImgURL(String playerImgURL) {
+        this.playerImgURL = playerImgURL;
+    }
+
     public String getIntroduction() {
         return introduction;
     }
@@ -125,4 +137,5 @@ public class FirstTeam implements Serializable{
     public void setIntroduction(String introduction) {
         this.introduction = introduction;
     }
+
 }

@@ -1,5 +1,6 @@
 package kr.co.tjeit.manchesterutd;
 
+import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import kr.co.tjeit.manchesterutd.util.ContextUtil;
 
@@ -115,11 +117,10 @@ public class MainActivity extends BaseActivity {
         myProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ContextUtil.getLoginUser(mContext) == null){
+                if (ContextUtil.getLoginUser(mContext) == null) {
                     Intent intent = new Intent(mContext, LoginActivity.class);
                     startActivity(intent);
-                }
-                else {
+                } else {
                     Intent intent = new Intent(mContext, MyProfileActivity.class);
                     startActivity(intent);
                 }
@@ -132,6 +133,33 @@ public class MainActivity extends BaseActivity {
     public void setValues() {
 
 
+    }
+
+    public class BackPressCloseHandler {
+        private long backKeyPressedTime = 0;
+        private Toast toast;
+        private Activity activity;
+
+        public BackPressCloseHandler(Activity context) {
+            this.activity = context;
+        }
+
+        public void onBackPressed() {
+            if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
+                backKeyPressedTime = System.currentTimeMillis();
+                showGuide();
+                return;
+            }
+            if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
+                activity.finish();
+                toast.cancel();
+            }
+        }
+
+        public void showGuide() {
+            toast = Toast.makeText(activity, "\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 
     @Override

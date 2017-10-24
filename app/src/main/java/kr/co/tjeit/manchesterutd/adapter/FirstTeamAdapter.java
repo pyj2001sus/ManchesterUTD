@@ -13,9 +13,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import kr.co.tjeit.manchesterutd.R;
 import kr.co.tjeit.manchesterutd.data.member.FirstTeam;
 import kr.co.tjeit.manchesterutd.util.GlobalData;
@@ -31,7 +34,7 @@ public class FirstTeamAdapter extends ArrayAdapter<FirstTeam> {
     LayoutInflater inf;
 
     public FirstTeamAdapter(Context context, List<FirstTeam> list) {
-        super(context, R.layout.fragment_first_team, list);
+        super(context, R.layout.member_grid_list_item, list);
 
         mContext = context;
         mList = list;
@@ -43,34 +46,41 @@ public class FirstTeamAdapter extends ArrayAdapter<FirstTeam> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View row = convertView;
         if ( row == null) {
-            row = inf.inflate(R.layout.fragment_first_team, null);
+            row = inf.inflate(R.layout.member_grid_list_item, null);
         }
 
         FirstTeam data = mList.get(position);
 
-        TextView backNum = (TextView) row.findViewById(R.id.backNumTxt);
-        TextView name = (TextView) row.findViewById(R.id.nameTxt);
-        TextView playerPosition = (TextView) row.findViewById(R.id.positionTxt);
-        TextView playedGame = (TextView) row.findViewById(R.id.playedGameTxt);
-        TextView goal = (TextView) row.findViewById(R.id.goalTxt);
-        TextView joinUnited = (TextView) row.findViewById(R.id.joinUnitedTxt);
-        TextView transferFee = (TextView) row.findViewById(R.id.transferfeeTxt);
-        TextView beforeUnited = (TextView) row.findViewById(R.id.beforeUnitedTxt);
-        TextView unitedDebut = (TextView) row.findViewById(R.id.debutTxt);
-        TextView country = (TextView) row.findViewById(R.id.countryTxt);
-        TextView introduction = (TextView) row.findViewById(R.id.introductionTxt);
+        CircleImageView circleImageView = row.findViewById(R.id.circleImageView);
+        Glide.with(mContext).load(data.getPlayerImgURL()).into(circleImageView);
+        TextView nameTxt = row.findViewById(R.id.nameTxt);
 
-        backNum.setText(data.getBackNum()+"");
-        name.setText(data.getName());
-        playerPosition.setText(data.getPosition());
-        playedGame.setText(data.getPlayedGame());
-        goal.setText(data.getGoal());
-        joinUnited.setText(data.getJoinUnited());
-        transferFee.setText(data.getTransferFee());
-        beforeUnited.setText(data.getBeforeUnited());
-        unitedDebut.setText(data.getUnitedDebut());
-        country.setText(data.getCountry());
-        introduction.setText(data.getIntroduction());
+        nameTxt.setText(data.getName());
+
+
+//        TextView backNum = (TextView) row.findViewById(R.id.backNumTxt);
+//        TextView name = (TextView) row.findViewById(R.id.nameTxt);
+//        TextView playerPosition = (TextView) row.findViewById(R.id.positionTxt);
+//        TextView playedGame = (TextView) row.findViewById(R.id.playedGameTxt);
+//        TextView goal = (TextView) row.findViewById(R.id.goalTxt);
+//        TextView joinUnited = (TextView) row.findViewById(R.id.joinUnitedTxt);
+//        TextView transferFee = (TextView) row.findViewById(R.id.transferfeeTxt);
+//        TextView beforeUnited = (TextView) row.findViewById(R.id.beforeUnitedTxt);
+//        TextView unitedDebut = (TextView) row.findViewById(R.id.debutTxt);
+//        TextView country = (TextView) row.findViewById(R.id.countryTxt);
+//        TextView introduction = (TextView) row.findViewById(R.id.introductionTxt);
+//
+//        backNum.setText(data.getBackNum()+"");
+//        name.setText(data.getName());
+//        playerPosition.setText(data.getPosition());
+//        playedGame.setText(data.getPlayedGame()+"");
+//        goal.setText(data.getGoal()+"");
+//        joinUnited.setText(data.getJoinUnited());
+//        transferFee.setText(data.getTransferFee());
+//        beforeUnited.setText(data.getBeforeUnited());
+//        unitedDebut.setText(data.getUnitedDebut());
+//        country.setText(data.getCountry());
+//        introduction.setText(data.getIntroduction());
 
         return row;
     }

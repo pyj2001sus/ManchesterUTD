@@ -59,8 +59,7 @@
                         <fragment
                             class="kr.co.tjeit.manchesterutd.fragment.member_fragment.FirstTeamFragment"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            tools:layout="@layout/activity_de_gea" />
+                            android:layout_height="match_parent" />
 
                     </FrameLayout>
 

@@ -1,11 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="감독"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/director_img" />
+
+                    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:background="#000000"
+                        android:shrinkColumns="*"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#000000"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="생년월일"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="1963년 1월 26일 (만 54세)"
+                                android:textSize="15sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#000000"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="국적"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="포르투갈"
+                                android:textSize="15sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#000000"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="출신지"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="세투발"
+                                android:textSize="15sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#000000"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="신체조건"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="174cm, 74kg"
+                                android:textSize="15sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#000000"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="소속 클럽"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="히우 아브 FC (1980~1982)\nCF 벨레넨세스 (1982~1983)\n세심브라 (1983~1985)\n코메리쿠 인두스트리아 (1985~1987)"
+                                android:textSize="15sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#000000"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="지도자 경력"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="스포르팅 CP 코치 (1992~1993)\nFC 포르투 코치 (1993~1996)\nFC 바르셀로나 코치 (1996~2000)\nSL 벤피카 감독 (2000)\nUD 레이리아 감독 (2001~2002)\nFC 포르투 감독 (2002~2004)\n첼시 FC 감독 (2004~2007)\nFC 인테르나치오날레 밀라노 감독 (2008~2010)\n레알 마드리드 CF 감독 (2010~2013)\n첼시 FC 감독 (2013~2015)\n맨체스터 유나이티드 FC 감독 (2016~)"
+                                android:textSize="15sp" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/introductionTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
 </LinearLayout>

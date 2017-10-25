@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+
     <TabHost
         android:id="@+id/myTabHost"
         android:layout_width="match_parent"
@@ -49,20 +51,14 @@
                             android:layout_height="match_parent"
                             tools:layout="@layout/fragment_first_team" />
 
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:id="@+id/de_gea"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <fragment
-                            class="kr.co.tjeit.manchesterutd.fragment.member_fragment.FirstTeamFragment"
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/VP1"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
+                            android:layout_height="match_parent">
+
+                        </android.support.v4.view.ViewPager>
 
                     </FrameLayout>
-
 
                 </LinearLayout>
 
@@ -78,6 +74,13 @@
                         android:layout_height="match_parent"
                         tools:layout="@layout/fragment_reserve_team" />
 
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/VP2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </android.support.v4.view.ViewPager>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -91,6 +94,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         tools:layout="@layout/fragment_academy" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/VP3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </android.support.v4.view.ViewPager>
 
                 </LinearLayout>
 
@@ -106,6 +116,13 @@
                         android:layout_height="match_parent"
                         tools:layout="@layout/fragment_director" />
 
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/VP4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </android.support.v4.view.ViewPager>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -120,6 +137,13 @@
                         android:layout_height="match_parent"
                         tools:layout="@layout/fragment_coaching_staff" />
 
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/VP5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </android.support.v4.view.ViewPager>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -133,6 +157,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         tools:layout="@layout/fragment_legend" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/VP6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </android.support.v4.view.ViewPager>
 
                 </LinearLayout>
 

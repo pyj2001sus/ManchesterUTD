@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ManchesterUTD</string>
+
+
+    <string-array name="hair_styles">
+        <item>반삭</item>
+        <item>댄디컷</item>
+        <item>샤기컷</item>
+        <item>다운펌</item>
+        <item>투블럭</item>
+    </string-array>
 </resources>

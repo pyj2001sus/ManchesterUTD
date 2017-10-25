@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,14 +16,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import kr.co.tjeit.manchesterutd.R;
 import kr.co.tjeit.manchesterutd.adapter.FirstTeamAdapter;
+import kr.co.tjeit.manchesterutd.adapter.SpinnerAdapter;
 import kr.co.tjeit.manchesterutd.data.member.FirstTeam;
 import kr.co.tjeit.manchesterutd.util.GlobalData;
 
@@ -33,9 +37,7 @@ import kr.co.tjeit.manchesterutd.util.GlobalData;
 public class FirstTeamFragment extends Fragment {
 
     FirstTeamAdapter mAdapter;
-
-    ArrayList<String> playerList = new ArrayList<>();
-    ArrayAdapter<String> playerAdapter;
+    SpinnerAdapter sAdapter;
 
     private android.widget.TextView number1;
     private de.hdodenhof.circleimageview.CircleImageView circleImageView;
@@ -80,6 +82,7 @@ public class FirstTeamFragment extends Fragment {
         this.allmemberLayout = (FrameLayout) v.findViewById(R.id.allmemberLayout);
         this.circleImageView = (CircleImageView) v.findViewById(R.id.circleImageView);
         this.memberGridView = (GridView) v.findViewById(R.id.memberGridView);
+        spinner = (Spinner)v.findViewById(R.id.spinner);
         return v;
     }
 
@@ -91,21 +94,6 @@ public class FirstTeamFragment extends Fragment {
     }
 
     private void setupEvents() {
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                Toast.makeText(mContext, position + "번 줄 선택", Toast.LENGTH_SHORT).show();
-
-                addHairStyle(position);
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
 
         memberGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -142,36 +130,19 @@ public class FirstTeamFragment extends Fragment {
 
     private void setValues() {
 
+
         mAdapter = new FirstTeamAdapter(getActivity(), GlobalData.firstTeams);
         memberGridView.setAdapter(mAdapter);
 
-    }
+        List<String> years = new ArrayList<>();
+        years.add("1991"); years.add("1992"); years.add("1993"); years.add("1994");
 
-    private void addHairStyle(int categoryIndex) {
-        playerList.clear();
-        if (categoryIndex==0) {
+        spinner.setSelection(27);
 
+        sAdapter = new SpinnerAdapter(getActivity(), years);
 
-            playerList.add("반삭");
-            playerList.add("댄디컷");
-            playerList.add("샤기컷");
-            playerList.add("투블럭");
-        }
-        else if (categoryIndex == 1) {
+        spinner.setAdapter(sAdapter);
 
-            playerList.add("다운펌");
-            playerList.add("가르마");
-            playerList.add("매직");
-        }
-        else if (categoryIndex == 2) {
-            playerList.add("빨강");
-            playerList.add("파랑");
-            playerList.add("노랑");
-            playerList.add("갈색");
-            playerList.add("탈색");
-        }
-
-        playerAdapter.notifyDataSetChanged();
     }
 
 

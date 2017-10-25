@@ -95,6 +95,17 @@ public class FirstTeamFragment extends Fragment {
 
     private void setupEvents() {
 
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         memberGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -134,12 +145,9 @@ public class FirstTeamFragment extends Fragment {
         mAdapter = new FirstTeamAdapter(getActivity(), GlobalData.firstTeams);
         memberGridView.setAdapter(mAdapter);
 
-        List<String> years = new ArrayList<>();
-        years.add("1991"); years.add("1992"); years.add("1993"); years.add("1994");
-
         spinner.setSelection(27);
 
-        sAdapter = new SpinnerAdapter(getActivity(), years);
+        sAdapter = new SpinnerAdapter(getActivity(), GlobalData.firstTeams);
 
         spinner.setAdapter(sAdapter);
 

@@ -6,9 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.GridView;
@@ -16,17 +14,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import kr.co.tjeit.manchesterutd.R;
 import kr.co.tjeit.manchesterutd.adapter.FirstTeamAdapter;
-import kr.co.tjeit.manchesterutd.adapter.SpinnerAdapter;
+import kr.co.tjeit.manchesterutd.adapter.FirstTeamSpinnerAdapter;
 import kr.co.tjeit.manchesterutd.data.member.FirstTeam;
 import kr.co.tjeit.manchesterutd.util.GlobalData;
 
@@ -37,7 +31,7 @@ import kr.co.tjeit.manchesterutd.util.GlobalData;
 public class FirstTeamFragment extends Fragment {
 
     FirstTeamAdapter mAdapter;
-    SpinnerAdapter sAdapter;
+    FirstTeamSpinnerAdapter sAdapter;
 
     private android.widget.TextView number1;
     private de.hdodenhof.circleimageview.CircleImageView circleImageView;
@@ -95,12 +89,29 @@ public class FirstTeamFragment extends Fragment {
 
     private void setupEvents() {
 
-//        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//
-//            }
-//        });
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                FirstTeam data = GlobalData.firstTeams.get(i);
+                Glide.with(getActivity()).load(data.getPlayerImgURL()).into(playerImg);
+                backNumTxt.setText(data.getBackNum() + ". ");
+                playerNameTxt.setText(data.getName());
+                positionTxt.setText(data.getPosition());
+                playedGameTxt.setText(data.getPlayedGame() + " 경기");
+                goalTxt.setText(data.getGoal() + " 골");
+                joinUnitedTxt.setText(data.getJoinUnited());
+                transferfeeTxt.setText(data.getTransferFee());
+                beforeUnitedTxt.setText(data.getBeforeUnited());
+                debutTxt.setText(data.getUnitedDebut());
+                countryTxt.setText(data.getCountry());
+                introductionTxt.setText(data.getIntroduction());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
         memberGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -140,13 +151,7 @@ public class FirstTeamFragment extends Fragment {
         mAdapter = new FirstTeamAdapter(getActivity(), GlobalData.firstTeams);
         memberGridView.setAdapter(mAdapter);
 
-        List<String> years = new ArrayList<>();
-        years.add("1991"); years.add("1992"); years.add("1993"); years.add("1994");
-
-        spinner.setSelection(27);
-
-        sAdapter = new SpinnerAdapter(getActivity(), years);
-
+        sAdapter = new FirstTeamSpinnerAdapter(getActivity(), GlobalData.firstTeams);
         spinner.setAdapter(sAdapter);
 
     }

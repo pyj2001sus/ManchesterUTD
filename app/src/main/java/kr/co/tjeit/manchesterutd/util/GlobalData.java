@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kr.co.tjeit.manchesterutd.R;
+import kr.co.tjeit.manchesterutd.data.NewsData;
 import kr.co.tjeit.manchesterutd.data.member.FirstTeam;
 import kr.co.tjeit.manchesterutd.data.member.Legend;
 
@@ -19,10 +20,12 @@ public class GlobalData {
 
     public static List<FirstTeam> firstTeams = new ArrayList<>();
     public static List<Legend> legends = new ArrayList<>();
+    public static List<NewsData> news = new ArrayList<>();
 
     public static void initGlobalData() {
         firstTeams.clear();
         legends.clear();
+        news.clear();
 
         firstTeams.add(new FirstTeam(1, "데 헤아", "골키퍼", 269, 0, "2011년 7월 1일", null, "아틀레티코 마드리드", "2011년 8월 7일 v 맨시티(N)", "스페인",
                 "http://www.fmkorea.com/files/attach/new/20170807/486616/600066291/735219576/58eb50f6e798ebafb8887e45fcaa3531.jpg",
@@ -37,10 +40,23 @@ public class GlobalData {
 
         legends.add(new Legend("라이언 긱스", "1973년 11월 29일", "1990년 7월 9일", "1991년 3월 2일, 애버튼 전(홈) 리그", 168, 963, "미드필더", "http://www.manutd.kr/~/media/65AA73EE018D49F3BD39593844C17350.ashx?w=240&amp;h=311&amp;rgn=0.10208333333333334%2c0.009316770186335404%2c0.5%2c0.9658385093167702",
                 "라이언 긱스는 선수로써 전설적인 몇 십년의 축구 인생의 한 장을 접고 맨체스터 유나이티드의 새로운 수석 코치로 새로운 장을 열게 되었다. 2014년 5월 19일은 그가 선수로써 마지막 경기를 치른 헐 시티전을 3-1로 이긴지 2주가 지난 후였다. 그는 두개의 목표를 가지고 경기하고 있었다. 그는 후보 선수로 뛰고 있었으며 퍼스트팀을 임시로 감독하고 있었다. 그는 임시 감독으로 소질을 보였고, 1990년부터 선수로 클럽에서 일하면서 쌓은 지식은 새 감독으로 취임한 루이스 판 할의 이상적인 오른팔이 되기에 충분했다. 2013/14 시즌, 그의 다리는 예전만큼 빠르지 않을지 모르지만, 그의 머리는 다른 어린 선수들보다 비상했고, 패스와 어시스트를 지시하는 그의 능력은 최고가 되었다. 결과적으로, 아일랜드 출신의 긱스는 은퇴 후에도 오랫동안 사람들의 입에 오르내릴 만큼 사랑받았던 최고의 선수이다. 라이언 긱스는 17개의 주요 상과 함께 팀에서 가장 많은 상을 받은 선수이지만 알렉스 퍼거슨 경의 도움이 없었다면 올드 트래포드에서 이런 영예를 누릴 수 없었을 것이다. Cardiff출신의 긱스는 10대 초반에 맨체스터 시티의 우수 학생 선수단(School of Excellence)에서 활동했지만 알렉스 경이 14번째 생일에 그의 집을 직접 방문한 것을 계기로 United의 유소년 클럽에 입단하게 되었다. 그는 1990년 11월 United에서 프로 선수 생활을 시작했고, 1991년 3월 2일 올드트래포드에서 열린 에버튼(Everton)과의 구 Division One 경기에서 데니스 어원(Denis Irwin)의 교체 선수로 들어가 리그 데뷔전을 치렀다. 다음 시즌에 처음 리그 경기를 시작하면서 그는 맨체스터 시티와의 경기에서 데뷔골을 넣어(비껴 찬 공이긴 했지만) 1-0 승리를 이끌며 그의 이름을 알렸다. 리 샤프(Lee Sharpe)의 부상으로 긱스는 현란한 드리블 기술과 폭발적인 스피드를 인정 받아 1991/92 시즌을 주전으로 시작할 수 있었다. 1992년 4월, United가 리그 컵 결승전에서 노팅엄 포레스트(Nottingham Forest)를 물리치면서 그는 생애 첫 우승을 경험했고, 다음 시즌에는 그의 여덟 개의 프리미어십 우승 메달 중 첫 번째 메달을 목에 걸었다."));
-        legends.add(new Legend("바비 찰튼 경", "1937년 10월 11일", "1953년 6월 1일", "1956년 10월 6일, 찰튼 전(홈) 리그", 	249, 758, "포워드", "http://www.manutd.kr/~/media/47F33B0D4CB945E5B2EEC2069AEA6DDF.ashx?w=240&amp;h=311&amp;rgn=0.0390625%2c0.021739130434782608%2c0.9375%2c0.845108695652174",
+        legends.add(new Legend("바비 찰튼 경", "1937년 10월 11일", "1953년 6월 1일", "1956년 10월 6일, 찰튼 전(홈) 리그", 249, 758, "포워드", "http://www.manutd.kr/~/media/47F33B0D4CB945E5B2EEC2069AEA6DDF.ashx?w=240&amp;h=311&amp;rgn=0.0390625%2c0.021739130434782608%2c0.9375%2c0.845108695652174",
                 "바비 찰튼 경보다 Manchester United의 가치를 높인 선수는 없습니다. 20세의 나이로 뮌헨의 끔찍한 사고에서 살아남은 그는 모든 경기를 사망한 동료들에게 바치듯 매 경기에 임했으며, 부상에서 회복하여 클럽과 국가를 모두 최정상에 올려놓았습니다. United에서 17년 간 선수 생활을 하며 그는 754 경기에 출장해 247개의 골을 기록했습니다. 그의 기록은 아무도 깰 수 없을 것 같습니다. 뉴캐슬 유나이티드(Newcastle United)의 유명한 스트라이커 Jackie Milburn의 조카인 젊은 찰튼은 여러 클럽에서 몹시 탐을 낸 선수였지만 1954년 10월 United에서 프로에 입문했고 1954, 1955, 1956년에 FA Youth Cup을 수상했습니다. 그는 1956년 올드 트래포드에서 찰튼(Charlton)을 상대로 데뷔전을 치렀는데, 이 경기에서 즉각적으로 두각을 나타내며 부상에도 불구하고 두 골을 기록했습니다. \"버스비 씨가 저더러 괜찮냐고 물어봤습니다.\"라고 바비 경은 회상했습니다. \"저는 실제로 발목을 삐었지만 인정하고 싶지 않아서 손가락을 꼬며 '예'라고 대답했습니다. 눈부신 활약에도 불구하고 찰튼은 1956/57 시즌 후반부까지 비교적 규칙적으로 출장하지는 못했으며, 버스비 베이브스(Busby Babes)가 첫 타이틀을 따냈을 때 10골을 기록했습니다. 주전 경쟁이 매우 치열했지만 1958년 1월 볼튼 원더러스(Bolton Wanderers)와의 경기에서 해트 트릭을 기록하면서 그는 자신의 입지를 굳혔고, 버스비(Busby) 감독은 이 젊고 힘이 넘치는 포워드를 빼면 경기를 하기가 더욱 어려워질 것이란 것을 깨닫게 되었습니다."));
         legends.add(new Legend("폴 스콜스", null, "1991년 7월 8일", "1994년 9월 21일, 포트 베일 전(원정) 리그 컵", 155, 718, "미드필더", "http://www.manutd.kr/~/media/94B1AE22E3BB420494A5922753C98D14.ashx?w=240&amp;h=311&amp;rgn=0.08208955223880597%2c0.05432098765432099%2c0.8955223880597015%2c0.7679012345679012",
                 "이어 2위를 차지했고, 1999년 트레블(Treble)을 달성할 때 비록 출전 정지로 챔피언스 리그 결승전에 나가지는 못했지만 그는 분명 팀의 초석이었습니다. United가 프리미어 리그에서 최근에 우승한 2003년에 그는 20 골을 기록하며, 여섯 경기에 일곱 골을 성공하기도 했습니다. 언제나 부지런하게 움직이며 잘못된 것 같으면서도 깔끔하고 짜임새 있는 패스를 하는 스콜스의 모습은 현대 경기에서 가장 보기 드문 광경 중 하나입니다. 골에 대한 뛰어난 시야와 미드필드를 누비는 활약으로 그는 국가 대표 선수로서 국제 대회에 66회 출전했습니다. 클럽 역사상 현재 폴이 기록한 14개의 메달 기록을 앞서는 선수는 얼마 되지 않으며, 그 중 클럽 현역 선수로는 라이언 긱스가\n" + "유일합니다. 팬들에게 '생강 왕자(Ginger Prince)'라는 애칭을 얻은 그는 계속되는 눈 질환으로 2005/06 시즌에 다소 활동이 위축되었지만 시즌 결승전에 깜짝 출전한 그를 올드 트래포드 팬들이 열렬하게 환영한 것을 보면 팬들의 마음에 그가 얼마나 깊이 자리잡고 있는지 알 수 있습니다. 그는 분명 가장 훌륭한 선수 중 하나입니다."));
+
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "앤디 콜, 즐라탄과 루카쿠를 말하다.", "맨체스터 유나이티드의 레전드 앤디 콜이 즐라탄 이브라히모비치의 복귀에 대해 입을 열었다. 콜은 최근 실내 체력단련장에서 즐라탄과 함께 시간을 보내고 있다."));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
+        news.add(new NewsData("http://www.manutd.kr/~/media/09DF4E42654E4570854CFD297AC7A978.ashx?w=480&amp;h=270&amp;rgn=0%2c244%2c1440%2c1056", "뉴스헤드라인", "뉴스내용"));
 
     }
 }

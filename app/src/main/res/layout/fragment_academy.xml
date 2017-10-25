@@ -1,11 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="아카데미"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/academy_img" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="U18S : 유나이티드 6 미들즈브러 2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="맨체스터 유나이티드 (Manchester Under-18s)의 최근 활약은 미들즈브러 (Middlesbrough)의 강점을 뛰어 넘어 6 경기 무패 행진을 이어가고 있습니다.
+            \n그리고 동시에, 레즈는 두 번째 연속 주간에 6 골을 집으로 비틀면서 칼럼에 대한 목표를 매우 건강하게 보여 주었다. 이 모임에는 테이블에서 네 번째 자리를 지닌 젊은이들과 함께 한 경기를 더 완주 한 미들스브로 위의 한 지점과 한 곳의 흥미 진진한 콘테스트가있었습니다.
+            \n지난 주말 뉴캐슬 유나이티드를 상대로 3-0 승리를 거둔 보로는 울버햄프턴 원더러스와의 경기에서 6-1 승리를 거두었 다.
+            \n날씨가 좋았던 이유는 킥오프 시간이 짧은 샤워와 아주 신선한 바람과 함께 가까워 졌을 때만 변하기 쉬운 것으로 묘사 될 수 있었기 때문입니다. 들어오는 '폭풍 브라이언'의 호의적 인 예가 있습니다. 때때로 햇빛을 비추는 장면을 가끔씩 공유합니다.
+            \nMason Greenwood와 Boro의 Connor Malley는 경기가 시작되자 경기 시작과 동시에 두 발의 총발을 쐈습니다. 양팀 모두 활기를 되찾고 상대 팀에게 경의를 표했다. 13 분에는 스티븐 웬느의 골로 돌파했다.
+            \n그러나 Kieran McKenna의 남자들은 빠른 대답을 보냈고, 3 분 후 Nishan Burkart가 왼쪽에서 멀리 떨어져서 Lee O'Connor가 멀리서 골을 터트렸다.
+            \nMillen Baars는 Boro 골키퍼 Zach Hemming의 뛰어난 세이브를 가져온 슈팅으로 두 번이나 그물을 찾지 못해서 불운했다. 그런 다음 4 분에 3 골을 터뜨리며 버크트가 스테판 워커의 테세이드 클럽 골로 유나이티드에서 두 골을 넣었다.
+            \n'스톰 브라이언'은 이번에는 돌풍이 강해짐에 따라 그 존재감을 느낄 수 있었지만 두 팀 모두 잘 대처했으며 어느 정도는 바람을 이용해 이익을 얻었습니다.
+            \n상반기가 정교하게 균형 잡힌 대회 였다면, 후반기에는 유나이티드가 3 회 더 그물을 찾은 후 월계관을 볼 것으로 보였다. Aidan Barlow는 73 분에 헤밍을 지나며 그린 우드의 머리 위로 날아가는 컬링 샷을 4-2로 만들었다.
+            \n대신 Largie Ramazani는 마지막 호루라기 직전 Dylan Levitt와 8 분, O'Connor를 세우려는 패스로 마지막 두 골을 넣었다."
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

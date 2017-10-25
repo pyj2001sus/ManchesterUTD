@@ -5,28 +5,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.List;
 
 import kr.co.tjeit.manchesterutd.R;
+import kr.co.tjeit.manchesterutd.data.member.FirstTeam;
 
 /**
  * Created by the on 2017-10-24.
  */
 
-public class SpinnerAdapter extends BaseAdapter {
+public class FirstTeamSpinnerAdapter extends BaseAdapter {
+
     Context mContext;
-    List<String> mList;
+    List<FirstTeam> mList;
     LayoutInflater inf;
 
 
-    public SpinnerAdapter(Context context, List<String> list) {
+    public FirstTeamSpinnerAdapter(Context context, List<FirstTeam> list) {
         mContext = context;
         mList = list;
         inf = LayoutInflater.from(mContext);
     }
-
 
     @Override
     public int getCount() {
@@ -41,8 +43,9 @@ public class SpinnerAdapter extends BaseAdapter {
 
         if (mList != null) {
             //데이터세팅
-            String text = mList.get(position);
-            ((TextView) convertView.findViewById(R.id.nowPlayer)).setText(text);
+           FirstTeam data = mList.get(position);
+            ((TextView) convertView.findViewById(R.id.nowPlayer)).setText(data.getName());
+
         }
 
         return convertView;
@@ -55,8 +58,8 @@ public class SpinnerAdapter extends BaseAdapter {
         }
 
         //데이터세팅
-        String text = mList.get(position);
-        ((TextView) convertView.findViewById(R.id.allPlayer)).setText(text);
+        FirstTeam data = mList.get(position);
+        ((TextView) convertView.findViewById(R.id.allPlayer)).setText(data.getName());
 
         return convertView;
     }

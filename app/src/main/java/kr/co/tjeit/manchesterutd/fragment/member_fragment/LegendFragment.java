@@ -17,12 +17,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.Date;
-
 import kr.co.tjeit.manchesterutd.R;
-import kr.co.tjeit.manchesterutd.adapter.FirstTeamAdapter;
 import kr.co.tjeit.manchesterutd.adapter.LegendAdapter;
-import kr.co.tjeit.manchesterutd.adapter.SpinnerAdapter;
+import kr.co.tjeit.manchesterutd.adapter.FirstTeamSpinnerAdapter;
+import kr.co.tjeit.manchesterutd.adapter.LegendSpinnerAdapter;
 import kr.co.tjeit.manchesterutd.data.member.FirstTeam;
 import kr.co.tjeit.manchesterutd.data.member.Legend;
 import kr.co.tjeit.manchesterutd.util.GlobalData;
@@ -34,7 +32,7 @@ import kr.co.tjeit.manchesterutd.util.GlobalData;
 public class LegendFragment extends Fragment {
 
     LegendAdapter mAdapter;
-    SpinnerAdapter sAdapter;
+    LegendSpinnerAdapter sAdapter;
     private android.widget.GridView memberGridView;
     private android.widget.FrameLayout allmemberLayout;
     private android.widget.Spinner spinner;
@@ -84,6 +82,29 @@ public class LegendFragment extends Fragment {
     }
 
     private void setupEvents() {
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                Legend data = GlobalData.legends.get(i);
+                Glide.with(getActivity()).load(data.getPlayerImgURL()).into(playerImg);
+                playerNameTxt.setText(data.getName());
+                birthDayTxt.setText(data.getBirthDay());
+                joinUnitedTxt.setText(data.getJoinUnited());
+                debutTxt.setText(data.getUnitedDebut());
+                goalTxt.setText(data.getAllGoal() + " 골");
+                playedGameTxt.setText(data.getPlayedGame() + " 경기");
+                positionTxt.setText(data.getPosition());
+                introductionTxt.setText(data.getIntroduction());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
         memberGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -117,6 +138,9 @@ public class LegendFragment extends Fragment {
 
         mAdapter = new LegendAdapter(getActivity(), GlobalData.legends);
         memberGridView.setAdapter(mAdapter);
+
+        sAdapter = new LegendSpinnerAdapter(getActivity(), GlobalData.legends);
+        spinner.setAdapter(sAdapter);
 
     }
 

@@ -1,11 +1,315 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="레전드"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/allmemberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <GridView
+                    android:visibility="visible"
+                    android:id="@+id/memberGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="4">
+                </GridView>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/memberDetailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:spinnerMode="dialog"
+                        android:popupBackground="#000000">
+
+
+                    </Spinner>
+
+                    <Button
+                        android:id="@+id/backBtn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/x_cion" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/playerImg"
+                        android:layout_width="180dp"
+                        android:layout_height="230dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/playerNameTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="name"
+                                android:textColor="@color/white"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="생년월일"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:id="@+id/birthDayTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="position"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="계약일"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:id="@+id/joinUnitedTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="269"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="United 데뷔"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:id="@+id/debutTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="2011년 8월 7일 v 맨시티(N)"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="총 득점"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:id="@+id/goalTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="총 출장"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:id="@+id/playedGameTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="269"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="포지션"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:id="@+id/positionTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="미드필더"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/introductionTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="소개글" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
 </LinearLayout>

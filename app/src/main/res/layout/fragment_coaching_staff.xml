@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="코칭스태프"/>
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/coaching_staff_tab_image" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="무리뉴 감독, 코칭 스태프 확정"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="주제 무리뉴 감독이 지난 화요일 맨체스터 유나이티드의 감독으로 공식 출근했다. 이제 함께할 코칭스태프를 확정 발표한다.\n\n무리뉴 감독과 함께할 스태프는 6명이다. 맨체스터 유나이티드의 Aon 트레이닝 훈련장에 합류할 고도의 전문가 집단이다. 루이 파리아 수석코치, 실비오 루오로, 리카드도 포르모징유, 카를로스 라린, 에밀리오 알바레스가 코치로 합류하고 분석관으로는 히오바니 케라가 합류한다.\n\n"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

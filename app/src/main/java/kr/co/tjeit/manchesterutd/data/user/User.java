@@ -11,6 +11,7 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
+    private int id;
     private String userId;
     private String nickName;
     private String name;
@@ -22,7 +23,8 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String userId, String nickName, String name, String password, String profileImgURL, String emailAddress, String phoneNum) {
+    public User(int id, String userId, String nickName, String name, String password, String profileImgURL, String emailAddress, String phoneNum) {
+        this.id = id;
         this.userId = userId;
         this.nickName = nickName;
         this.name = name;
@@ -30,6 +32,14 @@ public class User implements Serializable {
         this.profileImgURL = profileImgURL;
         this.emailAddress = emailAddress;
         this.phoneNum = phoneNum;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUserId() {

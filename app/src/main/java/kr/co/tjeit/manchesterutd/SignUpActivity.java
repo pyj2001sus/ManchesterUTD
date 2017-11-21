@@ -5,16 +5,31 @@ import android.content.Intent;
 import android.icu.math.MathContext;
 import android.icu.util.IslamicCalendar;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.nio.file.FileAlreadyExistsException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import kr.co.tjeit.manchesterutd.data.user.User;
+import kr.co.tjeit.manchesterutd.util.ServerUtil;
+
 public class SignUpActivity extends BaseActivity {
+
+    List<User> user = new ArrayList<>();
+    boolean isIdDupl = true;
 
     private android.widget.EditText idEdt;
     private android.widget.EditText passEdt;
@@ -37,9 +52,29 @@ public class SignUpActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        idEdt.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                        타이핑이 되는 매 순간마다, 중복 검사를 통과 못한것으로 변경
+                isIdDupl = true;
+                Log.d("아이디값변경", s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 boolean isIdOk = !idEdt.getText().toString().equals("");
                 boolean isPassOk = !passEdt.getText().toString().equals("");
                 boolean isConfirmPassOk = !confirmPassEdt.getText().toString().equals("");
@@ -81,6 +116,33 @@ public class SignUpActivity extends BaseActivity {
                     Intent intent = new Intent(mContext, MainActivity.class);
                     startActivity(intent);
                 }
+
+                ServerUtil.sign_up(mContext,
+                        idEdt.getText().toString(),
+                        nameEdt.getText().toString(),
+                        passEdt.getText().toString(),
+                        nickNameEdt.getText().toString(),
+                        emailEdt.getText().toString(),
+                        phoneNumEdt.getText().toString(), new ServerUtil.JsonResponseHandler() {
+
+                            @Override
+                            public void onResponse(JSONObject json) {
+                                try {
+                                    if (json.getBoolean("result")) {
+                                        Toast.makeText(mContext, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                                        Intent myIntent = new Intent(SignUpActivity.this, MainActivity.class);
+
+                                        startActivity(myIntent);
+
+                                        finish();
+                                    } else {
+                                        Toast.makeText(mContext, "회원가입에 실패했습니다. 아이디 변경후에 다시 시도해주세요.", Toast.LENGTH_SHORT).show();
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
             }
         });
     }
